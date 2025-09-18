@@ -1,0 +1,103 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .container {
+    margin-top: 50px;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    animation: fadeInDown 1.5s;
+  }
+  
+  input {
+    padding: 12px;
+    width: 250px;
+    border-radius: 8px;
+    border: none;
+    margin: 10px;
+  }
+  
+  button {
+    padding: 12px 20px;
+    border: none;
+    background: #4CAF50;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  button:hover {
+    background: #45a049;
+  }
+  
+  .results {
+    margin-top: 30px;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    animation: fadeInUp 1s;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .map-popup {
+    margin-top: 20px;
+  }
+  
+  .map-btn {
+    animation: pulse 1.5s infinite;
+    font-size: 1.2rem;
+    padding: 15px;
+    border-radius: 50px;
+  }
+  
+  .map {
+    height: 500px;
+    margin-top: 20px;
+    border-radius: 12px;
+  }
+  
+  /* Loading spinner (globe) */
+  .loading {
+    margin-top: 30px;
+    text-align: center;
+  }
+  .globe {
+    width: 60px;
+    height: 60px;
+    border: 6px solid #fff;
+    border-top: 6px solid #4CAF50;
+    border-radius: 50%;
+    margin: auto;
+    animation: spin 1s linear infinite;
+  }
+  @keyframes spin {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+  }
+  
+  @keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+  

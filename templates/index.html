@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Travel Guide</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">🌍 AI Travel Planner</h1>
+    <input type="text" id="location" placeholder="Enter a destination...">
+    <button id="searchBtn">Search</button>
+
+    <!-- Loading spinner -->
+    <div id="loading" class="loading hidden">
+      <div class="globe"></div>
+      <p>Generating your personalized travel plan...</p>
+    </div>
+
+    <div id="results" class="results hidden">
+      <h2>🏞 Tourist Places</h2>
+      <p id="places"></p>
+
+      <h2>🗺 Suggested Plan</h2>
+      <p id="plan"></p>
+
+      <h2>💰 Travel Cost & Options</h2>
+      <p id="cost"></p>
+
+      <!-- Animated Button Popup -->
+      <div class="map-popup hidden" id="mapPopup">
+        <button class="map-btn" onclick="showMap()">🗺 Open Map</button>
+      </div>
+    </div>
+
+    <div id="map" class="map hidden"></div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

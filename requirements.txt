@@ -1,0 +1,12 @@
+
+streamlit
+
+flask
+langchain
+langchain-google-genai
+google-generativeai
+python-dotenv
+langchain_ollama
+langchain_community
+langchain_groq
+groq
